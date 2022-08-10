@@ -27,7 +27,7 @@ st.image(img, width=700)
 
 
 # surface
-sqft_living = st.number_input('Surface', key ='sqft_living')
+sqft_living = st.slider('Surface', 0, 1000000, 10000, key ='sqft_living')
 st.write('La surface est:', sqft_living)
 
 
