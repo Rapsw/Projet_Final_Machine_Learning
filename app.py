@@ -1,25 +1,12 @@
 from unittest import result
 import streamlit as st 
 import pandas as pd 
-#import numpy as np
-#import matplotlib.pyplot as plt
-from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.pipeline import make_pipeline
-from sklearn.datasets import make_regression
-#import plotly.express as px 
-from sklearn.preprocessing import StandardScaler, OneHotEncoder
-from sklearn.linear_model import LinearRegression, Lasso, Ridge, ElasticNet
-from sklearn.model_selection import train_test_split
-from sklearn.compose import ColumnTransformer
-from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
-#import seaborn as sns
 import pickle
 from PIL import Image  
 
+# INPUTS WIDGETS
 
-
-st.title("Acheter l'appartement de vos rêves au meilleur prix du marché") 
+st.title("Achetez l'appartement de vos rêves au meilleur prix du marché") 
 
 # Image
 img = Image.open("maison.jpg")
@@ -247,7 +234,7 @@ sqft_lot15 = st.slider('Terrain voisins', 0, 300000, 100000, key = 'sqft_lot15')
 st.write('Le terrain est:', sqft_lot15)
 
 
-
+# Dictionnaire avec toutes mes colonnes)
 
 data = {
     'sqft_living':sqft_living,
@@ -269,15 +256,16 @@ data = {
     'sqft_lot15': sqft_lot15
 
 }
-
+# Transformation des inputs en Dataframe
 parametres = pd.DataFrame(data, index=[0])
 
+# pour appeler mon modèle
 pickle_in = open('my_pipe_lasso.pkl', 'rb') 
 my_pipe_lasso = pickle.load(pickle_in)
 
 print(parametres.info())
 
-
+# Prédiction
 def prediction(parametres):
 
     prediction = my_pipe_lasso.predict(parametres)
