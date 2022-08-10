@@ -27,25 +27,25 @@ st.image(img, width=700)
 
 
 # surface
-sqft_living = st.number_input('Surface en squarefeet', key ='sqft_living')
-st.write('La surface est de', sqft_living, "squarefeet")
+sqft_living = st.number_input('Surface', key ='sqft_living')
+st.write('La surface est:', sqft_living)
 
 
  # bedrooms
 bedrooms = st.number_input('Nombre de chambres', value=1, key = 'bedrooms')
-st.write('Il y a', bedrooms, "chambres")
+st.write('chambres:', bedrooms)
 
 
 # bathrooms
 bathrooms = st.selectbox(
-     'Nombre de chambres ',
+     'Salle de bain ',
      ('0', '1', '2','3','4','5','6', '7'),  index = 1, key ='bathrooms')
 st.write('Salle de bain:', bathrooms)
 
 
 # sqft_lot
 sqft_lot = st.slider('Terrain', 0, 1000000, 10000,  key ='sqft_lot')
-st.write('Le terrain est', sqft_lot)
+st.write('Le terrain est:', sqft_lot)
 
 
 # floors
@@ -108,7 +108,7 @@ st.write('Année:', yr_renovated)
 
 # zipcode 
 zipcode = st.selectbox(
-     'Quel est le code postal?',
+     'Code postal',
      ("79236",
 "98001",
 "98002",
@@ -230,7 +230,7 @@ zipcode = st.selectbox(
 "98199",
 "98224",
 "98288"),  key = 'zipcode')
-st.write('Le code postal est ', zipcode)
+st.write('Le code postal est:', zipcode)
 
 # lat 
 lat = st.number_input('Latitude', value = 47, key = 'lat')
