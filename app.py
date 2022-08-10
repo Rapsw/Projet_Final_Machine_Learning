@@ -1,20 +1,19 @@
 from unittest import result
 import streamlit as st 
 import pandas as pd 
-import numpy as np
-import pickle 
-import matplotlib.pyplot as plt
+#import numpy as np
+#import matplotlib.pyplot as plt
 from sklearn.preprocessing import MinMaxScaler, StandardScaler, RobustScaler
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
 from sklearn.datasets import make_regression
-import plotly.express as px 
+#import plotly.express as px 
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.linear_model import LinearRegression, Lasso, Ridge, ElasticNet
 from sklearn.model_selection import train_test_split
 from sklearn.compose import ColumnTransformer
 from sklearn.model_selection import GridSearchCV, RandomizedSearchCV
-import seaborn as sns
+#import seaborn as sns
 import pickle
 from PIL import Image  
 
