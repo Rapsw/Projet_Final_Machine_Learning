@@ -1,4 +1,4 @@
-from unittest import result
+from unittest import result                          # APPLICATION WEB
 import streamlit as st 
 import pandas as pd 
 import pickle
